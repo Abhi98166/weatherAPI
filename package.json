@@ -1,0 +1,14 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "Initial app for checking weather",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
