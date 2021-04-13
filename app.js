@@ -1,16 +1,18 @@
+const { static } = require('express');
 const express = require('express');
 const https = require('https');
-const bodyparser = require('body-parser');
+require('dotenv').config();
 const app = express();
 
-app.use(bodyparser.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}));
 
+app.use(express.static("public"));
 app.get('/',function(req,res){
-    res.sendFile(__dirname+"/index.html");
+    res.sendFile(__dirname+"/public/index.html");
 });
 
 app.post('/',function(req,res){
-    const authId = "a667d53dd347ae5ac3541299a525dafc";
+    const authId = process.env.APIKEY;
     const city = req.body.cityName;
     const units = "metric";
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid="+ authId+"&units="+ units;

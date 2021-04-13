@@ -1,0 +1,14 @@
+body{
+    background-color: #151515;
+    color: #b4a5a5;
+}
+.content{
+    background-color: #301b3f;
+    height: 60vh;
+    width: 60vh;
+    border-radius: 5%;
+    position: absolute;
+}
+form{
+    margin-top: 50px;
+}
